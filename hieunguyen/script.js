@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveContactBtn = document.getElementById('save-contact-btn');
     if (saveContactBtn) {
         saveContactBtn.addEventListener('click', function() {
-            const name = "Lê Thanh Hải";
-            const phone = "+84981682535";
-            const email = "thanhhai.name@gmail.com";
-            const address = "3/37/2 Tổ 1 P. Cửa Nam, TP Nam Định";
-            const website = "https://ECard.vn/";
-            const company = "Lê Hải ECard";
-            const title = "Sáng lập Danh thiếp eCard.vn";
+            const name = "Nguyen Minh Hieu";
+            const phone = "+84946660939";
+            const email = "hieunguyen@toanthanh.vn";
+            const address = "87B Bui Thi Xuan Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam";
+            const website = "https://toanthanh.vn/";
+            const company = "TOAN THANH SOLAR ENERGY CO.,LTD";
+            const title = "Chief Executive Officer (CEO)";
 
             // Tạo nội dung file vCard
             const vCardContent = `BEGIN:VCARD
@@ -51,7 +51,7 @@ END:VCARD`;
                 try {
                     await navigator.share({
                         title: document.title,
-                        text: 'Đây là danh thiếp kỹ thuật số của Lê Thanh Hải. Rất tiện lợi!',
+                        text: 'Đây là danh thiếp kỹ thuật số của Nguyen Minh Hieu. Rất tiện lợi!',
                         url: window.location.href // Chia sẻ URL hiện tại của trang
                     });
                     console.log('Chia sẻ thành công');
