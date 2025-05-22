@@ -269,8 +269,8 @@ body {
 }
 
 .detail-item {
-    display: flex;
-    align-items: center;
+    display: flex; /* Quan trọng để icon và text nằm cùng hàng */
+    align-items: flex-start; /* Căn chỉnh icon và văn bản ở đầu dòng nếu văn bản dài */
     background-color: #f8f9fa; /* Nền nhẹ cho mỗi mục thông tin */
     padding: 12px 15px;
     border-radius: 8px;
@@ -284,15 +284,19 @@ body {
 }
 
 .detail-item i {
-    font-size: 1.1em;
-    margin-right: 15px;
-    color: #007bff;
-    width: 25px; /* Để căn chỉnh đều các icon */
-    text-align: center;
+    font-size: 1.1em; /* Giữ kích thước font của icon */
+    margin: auto 0; /* Khoảng cách giữa icon và văn bản */
+    color: #007bff; /* Màu của icon */
+    
+    /* Các thuộc tính để icon đều nhau */
+    width: 13%;       /* Đặt một chiều rộng cố định cho khu vực của icon */
+    text-align: center; /* Căn giữa icon trong khu vực 25px */
+    flex-shrink: 0;    /* Ngăn icon co lại nếu nội dung quá dài */
 }
 
 .detail-item span {
-    word-break: break-all; /* Ngắt từ nếu quá dài */
+    word-break: break-all;
+     /* Ngắt từ nếu quá dài */
 }
 
 /* Responsive adjustments */
@@ -398,7 +402,5 @@ body {
 
     .detail-item i {
         font-size: 1em;
-        margin-right: 10px;
-        width: 20px;
     }
 }
