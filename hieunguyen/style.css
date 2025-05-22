@@ -268,6 +268,10 @@ body {
     gap: 12px;
 }
 
+.contact-details a {
+    text-decoration: none;
+}
+
 .detail-item {
     display: flex; /* Quan trọng để icon và text nằm cùng hàng */
     align-items: flex-start; /* Căn chỉnh icon và văn bản ở đầu dòng nếu văn bản dài */
@@ -295,7 +299,7 @@ body {
 }
 
 .detail-item span {
-    word-break: break-all;
+    /* word-break: break-all; */
      /* Ngắt từ nếu quá dài */
 }
 
