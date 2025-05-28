@@ -303,6 +303,78 @@ body {
      /* Ngắt từ nếu quá dài */
 }
 
+
+/* style.css */
+
+/* Các định kiểu khác giữ nguyên */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    width: 300px;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.download-btn {
+    background-color: #2157C5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.download-btn:hover {
+    background-color: #1a45a0;
+}
+
+.close-popup {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-popup:hover {
+    color: #000;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
     .top-nav,
@@ -408,3 +480,4 @@ body {
         font-size: 1em;
     }
 }
+
