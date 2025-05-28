@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>E-Card - Nguyen Hong Phung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://toanthanh.vn/wp-content/uploads/2025/04/favicon-150x150.png" sizes="32x32">
+    <link rel="icon" href="https://toanthanh.vn/wp-content/uploads/2025/04/favicon.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://toanthanh.vn/wp-content/uploads/2025/04/favicon.png">
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="header-image-section">
+            <img src="cover.jpg" alt="Header Banner" class="header-banner">
+            <img src="avartar.jpg" alt="Ảnh đại diện" class="profile-pic">
+        </div>
+
+        <div class="profile-info">
+            <h2 style="color: #2157C5; font-size: 1.4rem;">Nguyen Hong Phung</h2>
+            <p class="subtitle">Marketing Manager</p>
+            <p class="description">TOAN THANH SOLAR ENERGY CO.,LTD</p>
+        </div>
+
+        <div class="quick-contact-icons">
+            <a href="tel:+84946660939" class="icon-circle"><i class="fas fa-phone-alt"></i></a>
+            <a href="mailto:hieunguyen@toanthanh.vn" class="icon-circle"><i class="fas fa-envelope"></i></a>
+            <a href="https://maps.app.goo.gl/6s8XJ399BxkKez3e6" target="_blank" class="icon-circle"><i
+                    class="fas fa-map-marker-alt"></i></a>
+            <a href="https://toanthanh.vn/" target="_blank" class="icon-circle"><i class="fas fa-globe"></i></a>
+        </div>
+
+        <div class="action-buttons">
+            <button id="save-contact-btn"><i class="fas fa-address-book"></i> Save contacts</button>
+            <button id="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+        </div>
+
+        <!-- <div class="section">
+            <h3 class="section-title">| Giới thiệu</h3>
+            <p class="section-content">
+                Xin chào, tôi là Lê Hải! Là một lập trình viên yêu thích tìm hiểu marketing, kinh doanh, phát triển sản phẩm công nghệ có giá trị cho cộng đồng, và eCard.vn là một sản phẩm như thế.
+            </p>
+        </div> -->
+
+        <div class="section">
+            <h3 class="section-title"> Social Network</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61570890654149" target="_blank"
+                    class="social-icon-item">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://zalo.me/84364431313" target="_blank" class="social-icon-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/200px-Icon_of_Zalo.svg.png"
+                        alt="Zalo" class="icon-zalo">
+                </a>
+                <a href="#" class="social-icon-item" id="wechat-btn">
+                    <i class="fab fa-weixin"></i>
+                </a>
+                <a href="https://www.tiktok.com/@toan.thanh.energy" target="_blank" class="social-icon-item">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <!-- <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon-item">
+                    <i class="fab fa-instagram"></i>
+                </a> -->
+                <!-- <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="social-icon-item">
+                    <i class="fas fa-globe"></i> </a> -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title"> Contact</h3>
+            <div class="contact-details">
+                <a href="tel:+84946660939">
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0000000</span>
+                    </div>
+                </a>
+
+                <a href="mailto:hieunguyen@toanthanh.vn">
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>phungnguyen@toanthanh.com</span>
+                    </div>
+                </a>
+                <a href="https://maps.app.goo.gl/6s8XJ399BxkKez3e6" target="_blank">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>87B Bui Thi Xuan Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam</span>
+                    </div>
+                </a>
+                <a href="https://toanthanh.vn/" target="_blank">
+                    <div class="detail-item">
+                        <i class="fas fa-globe"></i>
+                        <span>https://toanthanh.vn/</span>
+                    </div>
+                </a>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- WeChat QR Code Popup -->
+    <div class="popup-overlay" id="wechat-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h3>WeChat QR Code</h3>
+            <img src="avartar.jpg" alt="WeChat QR Code">
+            <button class="download-btn"><i class="fas fa-download"></i> Download QR Code</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NDQ6F7K5N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6NDQ6F7K5N');
+    </script>
+</body>
+
+</html>
