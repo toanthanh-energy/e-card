@@ -350,12 +350,6 @@ button {
     /* Ngăn icon co lại nếu nội dung quá dài */
 }
 
-.detail-item span {
-    /* word-break: break-all; */
-    /* Ngắt từ nếu quá dài */
-}
-
-
 /* style.css */
 
 /* Các định kiểu khác giữ nguyên */

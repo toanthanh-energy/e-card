@@ -1,8 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // WeChat Popup Functionality
+    const wechatBtn = document.getElementById('wechat-btn');
+    const wechatPopup = document.getElementById('wechat-popup');
+    const closePopupBtn = document.querySelector('.close-popup');
+    const downloadBtn = document.querySelector('.download-btn');
+    const qrCodeImage = document.querySelector('.popup-content img');
+
+    // Open WeChat popup when clicking the WeChat button
+    wechatBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        wechatPopup.style.display = 'flex';
+    });
+
+    // Close popup when clicking the close button
+    closePopupBtn.addEventListener('click', () => {
+        wechatPopup.style.display = 'none';
+    });
+
+    // Close popup when clicking outside
+    wechatPopup.addEventListener('click', (e) => {
+        if (e.target === wechatPopup) {
+            wechatPopup.style.display = 'none';
+        }
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && wechatPopup.style.display === 'flex') {
+            wechatPopup.style.display = 'none';
+        }
+    });
+
+    // Download QR Code image
+    downloadBtn.addEventListener('click', async () => {
+        try {
+            // Get the image URL from the img element
+            const imageUrl = qrCodeImage.src;
+
+            // Fetch the image
+            const response = await fetch(imageUrl);
+            const blob = await response.blob();
+
+            // Create a blob URL
+            const blobUrl = window.URL.createObjectURL(blob);
+
+            // Create temporary link and trigger download
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = 'wechat_qr_code.jpg';
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            console.error('Download failed:', error);
+            alert('Không thể tải hình ảnh. Vui lòng thử lại sau.');
+        }
+    });
+
+
     // --- Chức năng Lưu danh bạ (vCard) ---
     const saveContactBtn = document.getElementById('save-contact-btn');
     if (saveContactBtn) {
-        saveContactBtn.addEventListener('click', function() {
+        saveContactBtn.addEventListener('click', function () {
             const name = "Tran Minh Tan";
             const phone = "+84867898577";
             const email = "tantran@toanthanh.vn";
